@@ -1,0 +1,30 @@
+# Ask the user to input a number
+number = int(input("Enter a number: "))
+
+def is_palindrome(number):
+    """
+    This function checks whether a given integer is a palindrome.
+    A palindrome reads the same backward as forward.
+    """
+
+    # Step 1: Check for negative numbers
+    # Negative numbers are not palindromes because of the '-' sign
+    if number < 0:
+        print("false")
+        return  # Exit the function early if the number is negative
+
+    # Step 2: Convert the number to a string
+    num_str = str(number)
+
+    # Step 3: Reverse the string using slicing [::-1]
+    reversed_str = num_str[::-1]
+
+    # Step 4: Compare the original and reversed strings
+    # If they are the same, it's a palindrome
+    if num_str == reversed_str:
+        print("true")
+    else:
+        print("false")
+
+# Call the function with the user's input
+is_palindrome(number)
